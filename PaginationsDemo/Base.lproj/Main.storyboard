@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PaginationsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fep-Lj-mJR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
+                                <connections>
+                                    <segue destination="IJx-qT-0DW" kind="embed" identifier="PageViewController" id="Kcq-GH-Rxa"/>
+                                </connections>
+                            </containerView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="C3C-Re-3w6">
+                                <rect key="frame" x="168" y="169" width="39" height="37"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fep-Lj-mJR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JhS-W4-0FG"/>
+                            <constraint firstItem="fep-Lj-mJR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bsd-Mg-wUU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fep-Lj-mJR" secondAttribute="trailing" id="fea-mW-N4D"/>
+                            <constraint firstItem="C3C-Re-3w6" firstAttribute="bottom" secondItem="fep-Lj-mJR" secondAttribute="bottom" constant="-10" id="keg-zW-5rS"/>
+                            <constraint firstItem="C3C-Re-3w6" firstAttribute="centerX" secondItem="fep-Lj-mJR" secondAttribute="centerX" id="kln-BI-d2w"/>
+                            <constraint firstItem="fep-Lj-mJR" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="1/3" id="xBo-aF-ipL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageVIew" destination="C3C-Re-3w6" id="lbv-Eo-3js"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="OYb-8n-x1j">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="IJx-qT-0DW" customClass="PageViewController" customModule="PaginationsDemo" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lUc-gF-D3f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903" y="133"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="Jwz-cD-vq5">
+            <objects>
+                <viewController storyboardIdentifier="ImageViewController" id="6a7-vh-pwI" customClass="ImageViewController" customModule="PaginationsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WDO-0u-JRj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pu6-Of-p2r">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Pu6-Of-p2r" secondAttribute="trailing" id="4Ed-Q8-QrI"/>
+                            <constraint firstItem="Pu6-Of-p2r" firstAttribute="leading" secondItem="WDO-0u-JRj" secondAttribute="leading" id="9KK-su-NpQ"/>
+                            <constraint firstItem="Pu6-Of-p2r" firstAttribute="top" secondItem="WDO-0u-JRj" secondAttribute="top" id="M4P-XR-Jn0"/>
+                            <constraint firstAttribute="bottom" secondItem="Pu6-Of-p2r" secondAttribute="bottom" id="dwL-zO-jL1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Pu6-Of-p2r" id="UUq-GL-4Bu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2O4-ns-klP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1670" y="133"/>
+        </scene>
+    </scenes>
+</document>
